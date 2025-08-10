@@ -70,11 +70,11 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-start">
           {services.map((service, index) => (
             <Card 
               key={service.title} 
-              className="h-full bg-gradient-card border-border/50 hover:shadow-medium transition-all duration-300 hover:-translate-y-2 group animate-scale-in"
+              className="h-full bg-gradient-card border-border/50 hover:shadow-medium transition-all duration-300 hover:-translate-y-2 group animate-scale-in flex flex-col"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader className="text-center pb-4">
@@ -85,11 +85,11 @@ const Services = () => {
                   {service.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="text-center space-y-4">
+              <CardContent className="text-center space-y-4 flex-1 flex flex-col">
                 <p className="text-muted-foreground leading-relaxed">
                   {service.description}
                 </p>
-                <div className="space-y-2">
+                <div className="space-y-2 flex-1">
                   {service.features.map((feature) => (
                     <div key={feature} className="flex items-center justify-center text-sm text-muted-foreground">
                       <span className="w-1.5 h-1.5 bg-brand-accent rounded-full mr-2"></span>
@@ -100,7 +100,7 @@ const Services = () => {
                 <Button 
                   variant="outline" 
                   size="sm" 
-                  className="w-full border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white transition-colors"
+                  className="w-full border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white transition-colors mt-auto"
                 >
                   Learn More
                 </Button>

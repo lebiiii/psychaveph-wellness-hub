@@ -8,7 +8,7 @@ import mentalWellness from "@/assets/mental-wellness.jpg";
 const About = () => {
   const teamMembers = [
     {
-      name: "Dr. Maria Santos",
+      name: "Donna Sombrea",
       role: "Lead Clinical Psychologist",
       image: psychologist1,
       specialization: "Anxiety, Depression, Trauma Therapy",

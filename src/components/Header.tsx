@@ -33,8 +33,12 @@ const Header = () => {
         <nav className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-hero rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">PSY</span>
+            <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center">
+              <img 
+                src="/lovable-uploads/2a310c3d-ab6f-40e0-a9e4-ceaa6190993f.png" 
+                alt="PsychAve PH Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <h2 className="text-xl font-bold text-primary">PsychAve PH</h2>

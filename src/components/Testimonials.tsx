@@ -77,7 +77,7 @@ const Testimonials = () => {
             Trusted by Our Clients
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Join hundreds of individuals who found healing and growth with PsychAvePH
+            Join hundreds of individuals who found healing and growth with PsychAve PH
           </p>
         </div>
       </div>

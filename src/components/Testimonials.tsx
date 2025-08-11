@@ -1,8 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Testimonials = () => {
   const [isPaused, setIsPaused] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragOffset, setDragOffset] = useState(0);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const trackRef = useRef<HTMLDivElement>(null);
 
   const testimonials = [
     {
@@ -66,6 +71,58 @@ const Testimonials = () => {
   // Duplicate testimonials for seamless infinite scroll
   const duplicatedTestimonials = [...testimonials, ...testimonials];
 
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setIsPaused(true);
+    setStartX(e.pageX);
+    setScrollLeft(dragOffset);
+    e.preventDefault();
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX;
+    const walk = (x - startX) * 1; // Scroll speed multiplier
+    const newOffset = scrollLeft - walk;
+    setDragOffset(newOffset);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    setTimeout(() => setIsPaused(false), 500); // Resume auto-scroll after a delay
+  };
+
+  const handleMouseLeave = () => {
+    if (isDragging) {
+      setIsDragging(false);
+      setTimeout(() => setIsPaused(false), 500);
+    } else {
+      setIsPaused(false);
+    }
+  };
+
+  // Touch events for mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setIsDragging(true);
+    setIsPaused(true);
+    setStartX(e.touches[0].pageX);
+    setScrollLeft(dragOffset);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging) return;
+    const x = e.touches[0].pageX;
+    const walk = (x - startX) * 1;
+    const newOffset = scrollLeft - walk;
+    setDragOffset(newOffset);
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+    setTimeout(() => setIsPaused(false), 500);
+  };
+
   return (
     <section className="py-20 bg-gradient-to-b from-brand-light/10 to-background overflow-hidden">
       <div className="container mx-auto px-4 mb-12">
@@ -84,14 +141,26 @@ const Testimonials = () => {
 
       <div className="relative">
         <div 
-          className={`flex gap-6 testimonials-track ${isPaused ? '' : 'animate-continuous-scroll'}`}
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
+          ref={trackRef}
+          className={`flex gap-6 testimonials-track ${isPaused || isDragging ? '' : 'animate-continuous-scroll'} ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+          style={{
+            transform: `translateX(${dragOffset}px)`,
+            transition: isDragging ? 'none' : 'transform 0.3s ease-out'
+          }}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseLeave}
+          onMouseEnter={() => !isDragging && setIsPaused(true)}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           {duplicatedTestimonials.map((testimonial, index) => (
             <Card 
               key={`${testimonial.id}-${index}`}
-              className="flex-shrink-0 w-80 bg-card border-border/50 shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+              className="flex-shrink-0 w-80 bg-card border-border/50 shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 select-none"
+              style={{ pointerEvents: isDragging ? 'none' : 'auto' }}
             >
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">

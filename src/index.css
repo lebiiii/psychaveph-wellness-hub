@@ -143,6 +143,10 @@ All colors MUST be HSL.
     animation: float 3s ease-in-out infinite;
   }
 
+  .animate-continuous-scroll {
+    animation: continuousScroll 40s linear infinite;
+  }
+
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -182,6 +186,15 @@ All colors MUST be HSL.
     }
     50% {
       transform: translateY(-10px);
+    }
+  }
+
+  @keyframes continuousScroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-384px * 8)); /* 320px card width + 24px gap = 344px per card, 8 cards */
     }
   }
 }

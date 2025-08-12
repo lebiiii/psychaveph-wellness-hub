@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Testimonials = () => {
-  const [isPaused, setIsPaused] = useState(false);
 
   const testimonials = [
     {
@@ -84,9 +82,7 @@ const Testimonials = () => {
 
       <div className="relative">
         <div 
-          className={`flex gap-6 testimonials-track ${isPaused ? '' : 'animate-continuous-scroll'}`}
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
+          className="flex gap-6 testimonials-track animate-continuous-scroll"
         >
           {duplicatedTestimonials.map((testimonial, index) => (
             <Card 

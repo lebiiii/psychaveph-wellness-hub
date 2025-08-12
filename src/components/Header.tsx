@@ -18,10 +18,6 @@ const Header = () => {
         {/* Top contact bar */}
         <div className="hidden md:flex justify-end py-2 text-sm text-muted-foreground border-b border-border/50">
           <div className="flex items-center space-x-6">
-            <a href="mailto:psychaveph.info@gmail.com" className="flex items-center hover:text-primary transition-colors">
-              <Mail className="w-3 h-3 mr-1" />
-              psychaveph.info@gmail.com
-            </a>
           </div>
         </div>
 

@@ -87,7 +87,7 @@ const Testimonials = () => {
           {duplicatedTestimonials.map((testimonial, index) => (
             <Card 
               key={`${testimonial.id}-${index}`}
-              className="flex-shrink-0 w-80 bg-card/90 backdrop-blur-sm border-border/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:rounded-lg before:pointer-events-none"
+              className="flex-shrink-0 w-80 bg-card/90 backdrop-blur-sm border-border/50 shadow-lg hover:shadow-2xl transition-transform duration-300 hover:-translate-y-2 cursor-pointer relative will-change-transform"
             >
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">

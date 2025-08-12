@@ -194,7 +194,7 @@ All colors MUST be HSL.
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-384px * 8)); /* 320px card width + 24px gap = 344px per card, 8 cards */
+      transform: translateX(calc(-320px * 8 - 24px * 8)); /* 320px card width + 24px gap per card, 8 cards */
     }
   }
 }

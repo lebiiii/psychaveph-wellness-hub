@@ -155,20 +155,24 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {teamMembers.map((member, index) => (
-              <Card key={member.name} className="text-center p-8 bg-gradient-card border-border/50 hover:shadow-medium transition-all duration-300 animate-scale-in" style={{ animationDelay: `${index * 0.2}s` }}>
-                <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden shadow-medium">
-                  <img
-                    src={member.image}
-                    alt={`${member.name} - Professional headshot of our ${member.role}`}
-                    className="w-full h-full object-cover"
-                  />
+              <Card key={member.name} className="text-center p-6 bg-gradient-card border-border/50 hover:shadow-medium transition-all duration-300 animate-scale-in h-full flex flex-col justify-between" style={{ animationDelay: `${index * 0.2}s` }}>
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden shadow-medium">
+                    <img
+                      src={member.image}
+                      alt={`${member.name} - Professional headshot of our ${member.role}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h4 className="text-lg font-bold text-foreground mb-2 min-h-[3rem] flex items-center">{member.name}</h4>
+                  <p className="text-brand-primary font-semibold mb-3 min-h-[2.5rem] flex items-center text-center">{member.role}</p>
                 </div>
-                <h4 className="text-xl font-bold text-foreground mb-2">{member.name}</h4>
-                <p className="text-brand-primary font-semibold mb-3">{member.role}</p>
-                <p className="text-muted-foreground text-sm mb-2">{member.specialization}</p>
-                <p className="text-brand-accent font-medium text-sm">{member.experience}</p>
+                <div className="mt-auto">
+                  <p className="text-muted-foreground text-sm mb-2 min-h-[2.5rem] flex items-center justify-center text-center">{member.specialization}</p>
+                  <p className="text-brand-accent font-medium text-sm">{member.experience}</p>
+                </div>
               </Card>
             ))}
           </div>

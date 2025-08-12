@@ -20,6 +20,20 @@ const About = () => {
       image: psychologist2,
       specialization: "Family Dynamics, Relationship Counseling",
       experience: "6+ Years Experience"
+    },
+    {
+      name: "Dr. Maria Santos, RPsy",
+      role: "Child & Adolescent Psychologist",
+      image: psychologist1,
+      specialization: "Child Development, Behavioral Issues",
+      experience: "5+ Years Experience"
+    },
+    {
+      name: "Dr. Carlos Mendez, MS",
+      role: "Cognitive Behavioral Therapist",
+      image: psychologist2,
+      specialization: "CBT, Stress Management, ADHD",
+      experience: "7+ Years Experience"
     }
   ];
 
@@ -141,7 +155,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {teamMembers.map((member, index) => (
               <Card key={member.name} className="text-center p-8 bg-gradient-card border-border/50 hover:shadow-medium transition-all duration-300 animate-scale-in" style={{ animationDelay: `${index * 0.2}s` }}>
                 <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden shadow-medium">

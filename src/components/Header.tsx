@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -25,8 +26,12 @@ const Header = () => {
         <nav className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-hero rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">PSY</span>
+            <div className="w-12 h-12 flex items-center justify-center">
+              <img 
+                src="/lovable-uploads/39bcdd1c-a1f5-4d39-87e8-0f301e557c52.png"
+                alt="PsychAve PH Logo" 
+                className="w-12 h-12 object-contain"
+              />
             </div>
             <div>
               <h2 className="text-xl font-bold text-primary">PsychAve PH</h2>

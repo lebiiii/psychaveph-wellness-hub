@@ -26,11 +26,11 @@ const Header = () => {
         <nav className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-16 h-16 flex items-center justify-center">
+            <div className="w-20 h-20 flex items-center justify-center">
               <img 
                 src="/lovable-uploads/39bcdd1c-a1f5-4d39-87e8-0f301e557c52.png"
                 alt="PsychAve PH Logo" 
-                className="w-16 h-16 object-contain"
+                className="w-20 h-20 object-contain"
               />
             </div>
             <div>

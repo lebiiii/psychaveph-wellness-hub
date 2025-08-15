@@ -15,21 +15,21 @@ const About = () => {
       experience: "8+ Years Experience"
     },
     {
-      name: "Dr. Juan Rodriguez",
+      name: "Donna Sombrea, MS, RPsy",
       role: "Family & Couples Therapist",
       image: psychologist2,
       specialization: "Family Dynamics, Relationship Counseling",
       experience: "6+ Years Experience"
     },
     {
-      name: "Dr. Maria Santos, RPsy",
+      name: "Donna Sombrea, MS, RPsy",
       role: "Child & Adolescent Psychologist",
       image: psychologist1,
       specialization: "Child Development, Behavioral Issues",
       experience: "5+ Years Experience"
     },
     {
-      name: "Dr. Carlos Mendez, MS",
+      name: "Donna Sombrea, MS, RPsy",
       role: "Cognitive Behavioral Therapist",
       image: psychologist2,
       specialization: "CBT, Stress Management, ADHD",

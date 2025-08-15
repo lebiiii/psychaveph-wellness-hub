@@ -22,7 +22,7 @@ const About = () => {
       experience: "6+ Years Experience"
     },
     {
-      name: "Donna Sombrea, MS, RPsy",
+      name: "Donna Sombrea, MS, RPs",
       role: "Child & Adolescent Psychologist",
       image: psychologist1,
       specialization: "Child Development, Behavioral Issues",

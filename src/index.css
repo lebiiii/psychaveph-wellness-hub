@@ -17,31 +17,31 @@ All colors MUST be HSL.
     --popover: 50 70% 98%;
     --popover-foreground: 45 25% 25%;
 
-    --primary: 45 70% 45%;
-    --primary-foreground: 50 60% 98%;
+    --primary: 134 20% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 48 40% 88%;
-    --secondary-foreground: 45 25% 25%;
+    --secondary: 120 27% 65%;
+    --secondary-foreground: 134 30% 25%;
 
     --muted: 50 35% 90%;
-    --muted-foreground: 45 15% 55%;
+    --muted-foreground: 134 15% 45%;
 
-    --accent: 35 85% 65%;
-    --accent-foreground: 45 25% 25%;
+    --accent: 71 59% 71%;
+    --accent-foreground: 134 30% 25%;
 
     --destructive: 5 75% 55%;
-    --destructive-foreground: 50 60% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 48 30% 85%;
-    --input: 48 30% 85%;
-    --ring: 45 70% 45%;
+    --border: 134 15% 80%;
+    --input: 134 15% 80%;
+    --ring: 134 20% 45%;
 
     /* PsychAvePH Brand Colors */
-    --brand-primary: 45 70% 45%;
-    --brand-secondary: 40 60% 55%;
-    --brand-accent: 35 85% 65%;
-    --brand-light: 50 45% 80%;
-    --brand-dark: 40 80% 35%;
+    --brand-primary: 134 20% 45%;
+    --brand-secondary: 120 27% 65%;
+    --brand-accent: 71 59% 71%;
+    --brand-light: 120 20% 85%;
+    --brand-dark: 134 30% 35%;
 
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--brand-dark)), hsl(var(--brand-primary)));

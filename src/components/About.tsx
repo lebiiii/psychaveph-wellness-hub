@@ -8,7 +8,7 @@ import mentalWellness from "@/assets/mental-wellness.jpg";
 const About = () => {
   const teamMembers = [
     {
-      name: "Donna Sombrea, MS, RPsy",
+      name: "Donna Sombrea, MS, RPs",
       role: "Lead Clinical Psychologist",
       image: psychologist1,
       specialization: "Anxiety, Depression, Trauma Therapy",

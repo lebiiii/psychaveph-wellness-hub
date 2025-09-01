@@ -9,49 +9,42 @@ All colors MUST be HSL.
 @layer base {
 :root {
     --background: 0 0% 100%;
-    --foreground: 45 25% 25%;
+    --foreground: 222.2 84% 4.9%;
 
-    --card: 50 60% 96%;
-    --card-foreground: 45 25% 25%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
 
-    --popover: 50 70% 98%;
-    --popover-foreground: 45 25% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 134 25% 55%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 120 35% 75%;
-    --secondary-foreground: 134 30% 25%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 50 35% 90%;
-    --muted-foreground: 134 15% 45%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 71 50% 80%;
-    --accent-foreground: 134 30% 25%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
-    --destructive: 5 75% 55%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 134 20% 85%;
-    --input: 134 20% 85%;
-    --ring: 134 25% 55%;
-
-    /* PsychAvePH Brand Colors */
-    --brand-primary: 134 25% 55%;
-    --brand-secondary: 120 35% 75%;
-    --brand-accent: 71 50% 80%;
-    --brand-light: 120 25% 90%;
-    --brand-dark: 134 30% 45%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-dark)), hsl(var(--brand-primary)));
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--brand-light) / 0.1));
-    --gradient-accent: linear-gradient(90deg, hsl(var(--brand-accent)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+    --gradient-accent: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--secondary)));
 
     /* Shadows */
-    --shadow-soft: 0 4px 20px hsl(var(--brand-primary) / 0.1);
-    --shadow-medium: 0 8px 30px hsl(var(--brand-primary) / 0.15);
-    --shadow-strong: 0 15px 40px hsl(var(--brand-primary) / 0.2);
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
+    --shadow-medium: 0 8px 30px hsl(var(--primary) / 0.15);
+    --shadow-strong: 0 15px 40px hsl(var(--primary) / 0.2);
 
     /* Animation */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

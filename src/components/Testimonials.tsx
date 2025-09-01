@@ -58,13 +58,6 @@ const Testimonials = () => {
       role: "Relationship Counseling Client",
       text: "Flexible scheduling and understanding staff made the process stress-free. Taking care of mental health is truly an investment.",
       color: "bg-pink-500"
-    },
-    {
-      id: 9,
-      initials: "N.H.",
-      role: "Relationship Counseling Client",
-      text: "Flexible scheduling and understanding staff made the process stress-free. Taking care of mental health is truly an investment.",
-      color: "bg-pink-500"
     }
   ];
 

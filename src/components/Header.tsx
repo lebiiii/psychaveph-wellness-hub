@@ -17,7 +17,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-soft">
       <div className="container mx-auto px-4">
         {/* Main navigation */}
-        <nav className="flex items-center justify-between py-1">
+        <nav className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 

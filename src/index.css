@@ -37,11 +37,11 @@ All colors MUST be HSL.
     --ring: 222.2 84% 4.9%;
 
     /* Brand Colors */
-    --brand-primary: 176 77% 37%;
-    --brand-secondary: 176 59% 50%;
-    --brand-accent: 176 70% 85%;
-    --brand-light: 176 40% 95%;
-    --brand-dark: 176 85% 25%;
+    --brand-primary: 140 65% 35%;
+    --brand-secondary: 140 55% 45%;
+    --brand-accent: 45 65% 85%;
+    --brand-light: 45 40% 95%;
+    --brand-dark: 140 75% 25%;
 
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));

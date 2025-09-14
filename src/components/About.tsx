@@ -15,7 +15,7 @@ const About = () => {
       experience: "8+ Years Experience"
     },
     {
-      name: "Donna Sombrea, MS, RPsy",
+      name: "Donna , MS, RPsy",
       role: "Family & Couples Therapist",
       image: psychologist2,
       specialization: "Family Dynamics, Relationship Counseling",

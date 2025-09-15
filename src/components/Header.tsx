@@ -23,7 +23,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="PsychAve PH Logo" 
-              className="w-16 h-16 object-contain"
+              className="w-18 h-18 object-contain"
             />
             <div className="flex flex-col">
               <h2 className="text-lg font-bold text-primary leading-tight">PsychAve PH</h2>

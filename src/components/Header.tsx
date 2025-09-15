@@ -23,11 +23,11 @@ const Header = () => {
             <img 
               src={logo} 
               alt="PsychAve PH Logo" 
-              className="w-24 h-24 object-contain"
+              className="w-18 h-18 object-contain"
             />
             <div>
-              <h2 className="text-sm font-bold text-primary">PsychAve PH</h2>
-              <p className="text-xs text-muted-foreground">Your safe space</p>
+              <h2 className="text-xs font-bold text-primary">PsychAve PH</h2>
+              <p className="text-xs text-muted-foreground hidden sm:block">Your safe space</p>
             </div>
           </div>
 

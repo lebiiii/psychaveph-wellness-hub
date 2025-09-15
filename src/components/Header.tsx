@@ -15,18 +15,18 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-soft">
-      <div className="container mx-auto px-1">
+      <div className="container mx-auto">
         {/* Main navigation */}
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-1">
+          <div className="flex items-center">
             <img 
               src={logo} 
               alt="PsychAve PH Logo" 
               className="w-24 h-24 object-contain"
             />
             <div>
-              <h2 className="text-base font-bold text-primary">PsychAve PH</h2>
+              <h2 className="text-sm font-bold text-primary">PsychAve PH</h2>
               <p className="text-xs text-muted-foreground">Your safe space</p>
             </div>
           </div>
